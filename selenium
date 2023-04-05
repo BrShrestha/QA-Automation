@@ -1,0 +1,16 @@
+# Python program to demonstrate
+# selenium
+  
+# import webdriver
+from selenium import webdriver
+import time
+  
+# create webdriver object
+driver = webdriver.Firefox()
+
+driver.maximize_window()
+driver.get("https://www.flipkart.com/")
+driver.find_element('xpath',"/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input").send_keys("mdayyanfahim@gmail.com")
+driver.find_element('xpath','/html/body/div[2]/div/div/div/div/div[2]/div/form/div[3]/button').click()
+time.sleep(4)
+driver.close()
